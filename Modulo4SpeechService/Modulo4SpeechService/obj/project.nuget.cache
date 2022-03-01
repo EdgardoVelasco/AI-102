@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/LnPAITjQNmsVh+IUSub1OwmhUVm+60REVW7i21bLaoHbFKV+GmrMiChZ1YJPD3hA7o5ccyB70XplB7jUUE3dw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\egar2\\Escritorio\\proyectosCurso\\Modulo4SpeechService\\Modulo4SpeechService\\Modulo4SpeechService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\egar2\\.nuget\\packages\\microsoft.cognitiveservices.speech\\1.20.0\\microsoft.cognitiveservices.speech.1.20.0.nupkg.sha512"
+  ],
+  "logs": []
+}
