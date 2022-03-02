@@ -10,7 +10,7 @@ headers = {
 
 if __name__=="__main__":
   conn = http.client.HTTPSConnection(host,port=443)
-  question = "{'question': 'cognitive services'}"
+  question = "{'question': 'te quiero'}"
   conn.request ("POST", route,  question, headers)
   response = conn.getresponse ()
   answer = response.read ()
