@@ -1,0 +1,10 @@
+{
+  "BotTraductor.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "LanzarDialogoTraducir": [
+        "Traducir.en-us"
+      ]
+    }
+  }
+}

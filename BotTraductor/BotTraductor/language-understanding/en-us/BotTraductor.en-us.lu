@@ -1,0 +1,20 @@
+
+# LanzarDialogoTraducir
+> add some example phrases to trigger this intent:
+> - please tell me the weather
+> - what is the weather like in {city=Seattle}
+
+> entity definitions:
+> @ ml city
+>Declaraciones
+-comienza la traduccion
+-quiero traducir
+-traduce 
+-es momento de traduccion
+-quiero comenzar a traducir
+
+@ list palabrasclave =
+	- traducir :
+		- traduce
+		- traduciendo
+		- traduccion

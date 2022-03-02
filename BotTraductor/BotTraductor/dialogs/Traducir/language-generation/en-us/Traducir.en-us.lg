@@ -1,0 +1,51 @@
+[import](common.lg)
+
+# SendActivity_ckaxIG()
+[Activity
+    Text = ${SendActivity_ckaxIG_text()}
+]
+
+# SendActivity_ckaxIG_text()
+- Bienvenido al dialogo de "Traducir"
+# TextInput_Prompt_zYForR()
+[Activity
+    Text = ${TextInput_Prompt_zYForR_text()}
+]
+
+# TextInput_Prompt_zYForR_text()
+- ¿En que idioma quieres traducir? nota: usa ISO6391 para indicar el idioma
+# TextInput_InvalidPrompt_zYForR()
+[Activity
+    Text = ${TextInput_InvalidPrompt_zYForR_text()}
+]
+
+# TextInput_InvalidPrompt_zYForR_text()
+- No es iso6391 repite de nuevo
+# SendActivity_uONs8K()
+[Activity
+    Text = ${SendActivity_uONs8K_text()}
+]
+
+# SendActivity_uONs8K_text()
+- Se ha elegido: ${user.entrada}
+# TextInput_Prompt_Nuk39C()
+[Activity
+    Text = ${TextInput_Prompt_Nuk39C_text()}
+]
+
+# TextInput_Prompt_Nuk39C_text()
+- Cuál es el texto que quieres traducir?
+# TextInput_InvalidPrompt_Nuk39C()
+[Activity
+    Text = ${TextInput_InvalidPrompt_Nuk39C_text()}
+]
+
+# TextInput_InvalidPrompt_Nuk39C_text()
+- el texto debe de tener más de una letra
+# SendActivity_RK9a23()
+[Activity
+    Text = ${SendActivity_RK9a23_text()}
+]
+
+# SendActivity_RK9a23_text()
+- ${user.salida}

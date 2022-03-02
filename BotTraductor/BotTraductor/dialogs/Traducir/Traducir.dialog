@@ -1,0 +1,122 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "qH1cqO",
+    "name": "Traducir",
+    "comment": "Este dialogo se usa cuando el usuario quiere comenzar a traducir"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "E6n8nP"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "ckaxIG"
+          },
+          "activity": "${SendActivity_ckaxIG()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "zYForR"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "prompt": "${TextInput_Prompt_zYForR()}",
+          "property": "user.idioma",
+          "validations": [
+            "=length(this.value)==2"
+          ],
+          "invalidPrompt": "${TextInput_InvalidPrompt_zYForR()}",
+          "defaultValue": "en"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "uONs8K"
+          },
+          "activity": "${SendActivity_uONs8K()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "Nuk39C"
+          },
+          "disabled": false,
+          "maxTurnCount": 4,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "${TextInput_InvalidPrompt_Nuk39C()}",
+          "prompt": "${TextInput_Prompt_Nuk39C()}",
+          "property": "user.texto",
+          "validations": [
+            "=length(this.value)>1"
+          ],
+          "defaultValue": "hola mundo"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "rSN2wE"
+          },
+          "method": "POST",
+          "url": "https://translatorenvf.cognitiveservices.azure.com/translator/text/v3.0/translate?to=${user.idioma}",
+          "body": [
+            {
+              "Text": "${user.texto}"
+            }
+          ],
+          "headers": {
+            "Ocp-Apim-Subscription-Key": "9fa7d48f174646299522f39e48d5dd09",
+            "Ocp-Apim-Subscription-Region": "eastus"
+          },
+          "responseType": "json",
+          "contentType": "application/json",
+          "resultProperty": "dialog.salida"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "ttrDDx"
+          },
+          "property": "user.salida",
+          "value": "=dialog.salida.content[0].translations[0].text"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "RK9a23"
+          },
+          "activity": "${SendActivity_RK9a23()}"
+        },
+        {
+          "$kind": "Microsoft.DeleteProperties",
+          "$designer": {
+            "id": "HpsuAA"
+          },
+          "properties": [
+            "user.idioma",
+            "user.texto",
+            "user.salida",
+            "dialog.salida"
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "Traducir.lg",
+  "recognizer": "Traducir.lu.qna",
+  "id": "Traducir"
+}
