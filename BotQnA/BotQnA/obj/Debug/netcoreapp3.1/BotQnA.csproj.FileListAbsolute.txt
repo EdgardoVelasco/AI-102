@@ -64,7 +64,6 @@ C:\Users\egar2\Escritorio\proyectosCurso\BotQnA\BotQnA\obj\Debug\netcoreapp3.1\s
 C:\Users\egar2\Escritorio\proyectosCurso\BotQnA\BotQnA\obj\Debug\netcoreapp3.1\staticwebassets\BotQnA.StaticWebAssets.xml
 C:\Users\egar2\Escritorio\proyectosCurso\BotQnA\BotQnA\obj\Debug\netcoreapp3.1\scopedcss\bundle\BotQnA.styles.css
 C:\Users\egar2\Escritorio\proyectosCurso\BotQnA\BotQnA\obj\Debug\netcoreapp3.1\BotQnA.RazorTargetAssemblyInfo.cache
-C:\Users\egar2\Escritorio\proyectosCurso\BotQnA\BotQnA\obj\Debug\netcoreapp3.1\BotQnA.csproj.CopyComplete
 C:\Users\egar2\Escritorio\proyectosCurso\BotQnA\BotQnA\obj\Debug\netcoreapp3.1\BotQnA.dll
 C:\Users\egar2\Escritorio\proyectosCurso\BotQnA\BotQnA\obj\Debug\netcoreapp3.1\BotQnA.pdb
 C:\Users\egar2\Escritorio\proyectosCurso\BotQnA\BotQnA\obj\Debug\netcoreapp3.1\BotQnA.genruntimeconfig.cache
